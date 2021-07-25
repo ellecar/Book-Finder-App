@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Book List</ion-title>
+    <ion-buttons slot="end" (click)="logout()">
+      <ion-icon name="exit-outline" class="LogoutIcon"></ion-icon>
+  </ion-buttons>
+    <ion-buttons class="out" slot="start" (click)="add()">
+      <ion-icon name="person-add-outline" class="LogoutIcon"></ion-icon>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-list *ngFor="let list of list">
+      <ion-item name="record">
+        <ion-thumbnail slot="start">
+          <img src="../../assets/book.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Title: {{list.title}}</h2>
+          <h3>Author: {{list.author}}</h3>
+          <h3>Price: {{list.price}}</h3>
+          <h3>Status: {{list.status}}</h3>
+          <h3>Date Listed: {{list.date}}</h3>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+</ion-content>

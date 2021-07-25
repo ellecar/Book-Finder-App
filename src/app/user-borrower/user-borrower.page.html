@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Borrower List</ion-title>
+    <ion-buttons slot="start" (click)="back()">
+      <ion-icon name="arrow-undo" class="BackIcon" color="primary"></ion-icon>
+  </ion-buttons>
+    <ion-buttons slot="end" (click)="logout()">
+      <ion-icon name="log-out" class="LogoutIcon" color="primary"></ion-icon>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-item name="record" *ngFor="let borrower of borrower">
+        <ion-thumbnail slot="start">
+          <img src="../../assets/2202112.png">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Borrower Name: {{borrower.b_name}}</h2>
+          <h3>Book Name: {{borrower.b_title}}</h3>
+          <h3>Days Rented: {{borrower.rented}}</h3>
+          <h3>Rent Price: {{borrower.b_price}}</h3>
+          <h3>Date Borrowed: {{borrower.b_date}}</h3>
+          <h3>Status: {{borrower.b_status}}</h3>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+
+</ion-content>

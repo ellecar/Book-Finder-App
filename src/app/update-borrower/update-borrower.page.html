@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Update Borrower</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+      <ion-item>
+        <ion-label position="floating">Status</ion-label>
+        <ion-select name="model" [(ngModel)]="b_status" ngDefaultControl required>
+          <ion-select-option value="Approved">Approved</ion-select-option>
+          <ion-select-option value="Returned">Returned</ion-select-option>
+          <ion-select-option value="Reject">Reject</ion-select-option>
+        </ion-select>
+      </ion-item> 
+
+      <ion-row>
+        <ion-col>
+          <ion-button color="success" expand="block" (click)="update()">Update</ion-button>
+        </ion-col>
+      </ion-row>
+
+  </ion-list>
+</ion-content>
